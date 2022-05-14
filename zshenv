@@ -15,6 +15,7 @@ export ZSH_DOT_DIR="$XDG_CONFIG_HOME/zsh"
 export VIM_DOT_DIR="$XDG_CONFIG_HOME/vim"
 export TMUX_DOT_DIR="$XDG_CONFIG_HOME/tmux"
 export FZF_DOT_DIR="$XDG_CONFIG_HOME/fzf"
+export GIT_DOT_DIR="$XDG_CONFIG_HOME/git"
 
 # aliases
 export ALIASES_FILE="$ALIASES_DIR/aliases"
@@ -41,4 +42,8 @@ export VIMINFO_FILE="$VIM_DOT_DIR/viminfo"
 
 # fzf
 export FZF_ZSH_FILE="$FZF_DOT_DIR/fzf.zsh"
+
+# git
+export GLOBAL_GITIGNORE_FILE="$GIT_DOT_DIR/global_gitignore"
+
 

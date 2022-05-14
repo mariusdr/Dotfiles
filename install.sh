@@ -14,6 +14,7 @@ mkdir -p $ZSH_DOT_DIR
 mkdir -p $VIM_DOT_DIR
 mkdir -p $TMUX_DOT_DIR
 mkdir -p $FZF_DOT_DIR
+mkdir -p $GIT_DOT_DIR
 
 # aliases
 ln ./aliases/aliases $ALIASES_FILE
@@ -31,4 +32,9 @@ ln ./vim/vimrc $VIMRC_FILE
 # zsh
 ln ./zsh/zshrc $ZSHRC_FILE
 ln ./zsh/zprofile $ZPROFILE_FILE
-cp ./zsh/install_oh_my_zsh.sh $ZSH_DOT_DIR/
+ln ./zsh/install_oh_my_zsh.sh $ZSH_DOT_DIR/install_oh_my_zsh.sh
+
+# git 
+ln ./git/global_gitignore $GLOBAL_GITIGNORE_FILE
+
+
