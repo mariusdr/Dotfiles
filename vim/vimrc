@@ -1,0 +1,152 @@
+"=============================================================="
+" Plugins                                                      "
+"=============================================================="
+
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-surround'
+Plug 'bling/vim-bufferline'
+Plug 'sheerun/vim-polyglot'
+Plug 'ghifarit53/tokyonight-vim'
+Plug 'itchyny/lightline.vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+call plug#end()
+
+"=============================================================="
+" General    					                               "
+"=============================================================="
+
+" history
+set history=500
+
+" enable filetype plugins
+filetype plugin on
+filetype indent on
+
+" set autoread when a file is changed from the outside
+set autoread
+au FocusGained,BufEnter * checktime
+
+" set language 
+let $LANG='en'
+set langmenu=en
+
+" unicode 
+set encoding=utf8
+
+" no error sounds
+set noerrorbells
+set novisualbell 
+set t_vb=
+set tm=500
+
+" set standard file type
+set ffs=unix,dos,mac
+
+" no backup for files, as most stuff is in git anyway
+set nobackup
+set nowb
+set noswapfile
+
+" return to last edit position when opening files 
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+set viminfo+=n$VIMINFO_FILE
+
+"=============================================================="
+" Graphical Setup					                           "
+"=============================================================="
+syntax on 
+
+set termguicolors
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+colorscheme tokyonight
+
+set laststatus=2
+let g:lightline = { 'colorscheme': 'tokyonight', }
+
+let g:tmuxline_powerline_separators = 0
+
+"=============================================================="
+" Texteditor Setup					                           "
+"=============================================================="
+
+" searching ignores case ...
+set ignorecase  
+
+" ... except when started with uppercase
+set smartcase   
+
+" incremental search (like in web browsers)
+set incsearch 
+
+" highlight search results
+set hlsearch
+
+" matching brackets when text indicator is over them
+set showmatch
+
+set splitbelow
+set splitright
+
+set number
+set nowrap
+
+" always show current position
+set ruler 
+
+" dont redraw while executing macros (perf)
+set lazyredraw
+
+" magic for regular expressions
+set magic
+
+" use spaces instead of tabs
+set expandtab
+set smarttab
+
+" 1 tab = 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" auto indent and smart indent
+set ai
+set si
+set wrap
+
+" make backspace correctly work
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+"=============================================================="
+" Keybindings     					                           "
+"=============================================================="
+
+let mapleader="\<Space>"
+
+noremap <Leader>bd :bd<CR>
+noremap <Leader>ls :ls<CR>
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <esc><esc> :nohlsearch<return>  
+
+" quickly open a buffer for scribble
+map <leader>q :e ~/buffer<cr>
+
+" quick menu for selecting between open buffers
+nnoremap <leader>p :buffers<CR>:buffer<Space>
+
+" horizontal and vertical split
+nnoremap <leader>h :split<CR>
+nnoremap <leader>v :vsplit<CR>
+
