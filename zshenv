@@ -34,10 +34,8 @@ export ZHISTORY_FILE="$ZSH_DOT_DIR/.zhistory"
 export BASHRC_FILE="$HOME/.bashrc"
 
 # tmux 
-export TMUX_BIN_DIR="/opt/homebrew/opt/tmux/bin"
 export TMUX_CONF_FILE="$TMUX_DOT_DIR/tmux.conf"
 export TMUX_LINE_FILE="$TMUX_DOT_DIR/tmuxline"
-export PATH=$TMUX_BIN_DIR:${PATH+:$PATH}
 
 # vim
 export VIMRC_FILE="$VIM_DOT_DIR/vimrc"
