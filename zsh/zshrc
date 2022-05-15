@@ -29,8 +29,7 @@ if [[ `uname` == "Darwin" ]]; then
 fi
 source $ZSH_DOT_DIR/oh-my-zsh/oh-my-zsh.sh
 
-# Compilation flags
-ARCHFLAGS="-arm64"
-
 # Laod fzf
-source $FZF_ZSH_FILE
+if test -f "$FZF_ZSH_FILE"; then
+    source $FZF_ZSH_FILE
+fi
