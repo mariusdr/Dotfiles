@@ -8,6 +8,7 @@ alias vizprofile='vim $ZPROFILE_FILE'
 alias vibashrc='vim $BASHRC_FILE'
 alias vitmux='vim $TMUX_CONF_FILE'
 alias vivimrc='vim $VIMRC_FILE'
+alias vissh='vim $SSH_CONFIG_FILE'
 
 # Commands
 alias ls='ls --color=auto'
