@@ -26,6 +26,7 @@ export ZDOTDIR="$ZSH_DOT_DIR" # zsh looks in this path for .zshrc and .zshprofil
 export ZSHENV_FILE="$HOME/.zshenv"
 export ZSHRC_FILE="$ZSH_DOT_DIR/.zshrc"
 export ZPROFILE_FILE="$ZSH_DOT_DIR/.zprofile"
+export LOCAL_PROFILE_FILE="$ZSH_DOT_DIR/profile"
 export ZHISTORY_FILE="$ZSH_DOT_DIR/.zhistory"
 
 # bash

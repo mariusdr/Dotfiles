@@ -1,11 +1,6 @@
-# brew enviroment setup
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# llvm setup
-export PATH=$PATH:/opt/homebrew/Cellar/llvm/13.0.0_1/bin/
-
 # vim setup
 export VIMINIT="source $VIMRC_FILE"
 
-# cargo setup
-. "$HOME/.cargo/env"
+if test -f "$LOCAL_PROFILE_FILE"; then
+    source $LOCAL_PROFILE_FILE
+fi

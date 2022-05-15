@@ -1,7 +1,7 @@
 #!/bin/sh 
 
 ln ./zshenv $HOME/.zshenv
-source $HOME/.zshenv
+source ./zshenv
 
 # make conf directories
 mkdir -p $XDG_CONFIG_HOME
@@ -33,6 +33,7 @@ ln ./vim/vimrc $VIMRC_FILE
 ln ./zsh/zshrc $ZSHRC_FILE
 ln ./zsh/zprofile $ZPROFILE_FILE
 ln ./zsh/install_oh_my_zsh.sh $ZSH_DOT_DIR/install_oh_my_zsh.sh
+touch $LOCAL_PROFILE_FILE
 
 # git 
 ln ./git/global_gitignore $GLOBAL_GITIGNORE_FILE
