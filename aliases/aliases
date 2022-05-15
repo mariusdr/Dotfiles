@@ -2,6 +2,7 @@
 
 # edit config files
 alias vialias='vim $ALIASES_FILE'
+alias vilalias='vim $LOCAL_ALIASES_FILE'
 alias vizshenv='vim $ZSHENV_FILE'
 alias vizshrc='vim $ZSHRC_FILE' 
 alias vizprofile='vim $ZPROFILE_FILE'
@@ -25,3 +26,8 @@ alias pg='ping 8.8.8.8'
 # Vim-like split commands for tmux
 alias split='tmux split-window'  
 alias vsplit='tmux split-window -h'
+
+# source local alises
+if test -f "$LOCAL_ALIASES_FILE"; then
+    source $LOCAL_ALIASES_FILE
+fi

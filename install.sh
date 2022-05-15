@@ -18,6 +18,7 @@ mkdir -p $GIT_DOT_DIR
 
 # aliases
 ln ./aliases/aliases $ALIASES_FILE
+touch $LOCAL_ALIASES_FILE
 
 # tmux
 ln ./tmux/tmux.conf $TMUX_CONF_FILE

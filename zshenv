@@ -20,6 +20,7 @@ export SSH_DOT_DIR="$HOME/.ssh"
 
 # aliases
 export ALIASES_FILE="$ALIASES_DIR/aliases"
+export LOCAL_ALIASES_FILE="$ALIASES_DIR/local_aliases"
 
 # zsh
 export ZDOTDIR="$ZSH_DOT_DIR" # zsh looks in this path for .zshrc and .zshprofile
